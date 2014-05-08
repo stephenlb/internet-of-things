@@ -1,0 +1,88 @@
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* PubNub IoT Internet of Things Color Palette
+
+    #4e4687 - purple 1
+    #49427c - purple 2
+    #433c76 - purple 3
+    #322c60 - dark purple
+    #182030 - dark dark purple
+    #5b58b6 - saturated purple
+    #cdcce0 - gray
+    #76aa8c - green - callout
+
+    #dddde4 - light gray
+    #bdbfcb - gray
+    #acd5d8 - cyan
+    #5e6741 - dark green
+    #565192 - purple
+    #6da87c - light green
+    #f2cda1 - human skin
+    #dfb965 - light chartreuse
+*/
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Main Section */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.section-main {
+    background-image: linear-gradient(to bottom, #2a1b52, #533b89 );
+    color: #fff;
+}
+.section-main-h1 {
+    color: #fff;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+    margin: 30px 0 40px 0;
+}
+.section-main-pubnub-logo {
+    height: 40px;
+    margin: 50px 0 30px 0;
+}
+.section-main-whirly {
+    margin: 30px 0 30px 0;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Hero Graphic Screen */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+#hero-circle-left,
+#hero-circle-right {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    font-size: 72px;
+    line-height: 114px;
+    text-align: center;
+}
+#hero-circle-left {
+    background: #5b58b6;
+}
+#hero-circle-right {
+    background: #5b58b6;
+}
+.hero-circle {
+    text-align: center;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Section Mini Description */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.section-mini-description-lead {
+    margin: 80px 0 80px 0;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Utilities */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.relative {
+    position: relative;
+}
+
+button,
+textarea,
+input {
+    outline: none !important;
+}
+
