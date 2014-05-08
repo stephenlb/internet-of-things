@@ -43,6 +43,9 @@
 .section-main-whirly {
     margin: 90px 0 90px 0;
 }
+#iot-device-list {
+    display: none;
+}
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 /* Hero Graphic Animated Dots */

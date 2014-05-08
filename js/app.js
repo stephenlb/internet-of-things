@@ -1,23 +1,31 @@
 (function(){
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// Main
+// Main Header Section
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 var circle_left_title  = PUBNUB.$('hero-circle-left-title')
 ,   circle_left        = PUBNUB.$('hero-circle-left')
 ,   circle_right_title = PUBNUB.$('hero-circle-right-title')
 ,   circle_right       = PUBNUB.$('hero-circle-right')
-,   iot_device_list    = PUBNUB.$('iot-device-list');
+,   iot_device_list    = children(PUBNUB.$('iot-device-list'));
 
-switch_text( circle_right_title, fade_out_and_back, 'Embedded' );
-switch_text( circle_right, fade_out_and_back, '<span class="glyphicon glyphicon-qrcode"></span>' );
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// Rotate Right Circle
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+setInterval( function() {
+    var title_text  = next(iot_device_list).innerHTML
+    ,   circle_text = next(iot_device_list).innerHTML;
+
+    switch_text( circle_right_title, fade_out_and_back, circle_text );
+    switch_text( circle_right,       fade_out_and_back, title_text  );
+}, 3000 );
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Circle Rotate Functions
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 function switch_text( node, animation, text ) {
-    animation( node, 1.0 );
-    update_text( node, text, 0.5 );
+    animation( node, 1.5 );
+    update_text( node, text, 0.75 );
 }
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -43,6 +51,16 @@ function fade_out_and_back( node, duration ) {
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Utilities
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+function next(arry) {
+    arry.current = arry.current || 0;
+    return arry[arry.current++] || (function() {
+        arry.current = 0;
+        return next(arry);
+    })();
+}
+function children(node) {
+    return node.getElementsByTagName('div');
+}
 function update_text( node, text, delay ) {
     setTimeout( function() { node.innerHTML = text }, (delay || 0) * 1000 );
 }
