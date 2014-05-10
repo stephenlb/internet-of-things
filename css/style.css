@@ -37,14 +37,20 @@
     margin: 30px 0 40px 0;
 }
 .section-main-pubnub-logo {
+    z-index: 1000;
     height: 40px;
     margin: 50px 0 30px 0;
 }
 .section-main-whirly {
     margin: 90px 0 90px 0;
 }
+#iot-whirly-list,
 #iot-device-list {
     display: none;
+}
+#iot-whirly-container {
+    position: absolute;
+    font-size: 100px;
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
