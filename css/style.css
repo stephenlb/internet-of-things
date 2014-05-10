@@ -105,14 +105,14 @@
     text-align: center;
     color: rgba(255,255,255,0.9);
     text-shadow: 0 0 10px rgba(255,255,255,0.3);
-    -webkit-transform-origin: 50% 100%;
+    -webkit-transform-origin: 0% 200%;
 }
 #hero-circle-center {
     display: inline-block;
     width: 150px;
     height: 150px;
     border-radius: 150px;
-    line-height: 180px;
+    line-height: 150px;
     font-size: 120px;
     text-align: center;
     color: rgba(255,255,255,0.9);
@@ -135,6 +135,7 @@
     margin: 10px 0 0 0;
     font-size: 20px;
     font-weight: 200;
+    -webkit-transform-origin: 200% 200%;
 }
 #hero-circle-center-title {
     margin: 10px 0 0 0;
