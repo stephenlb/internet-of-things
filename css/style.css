@@ -96,15 +96,16 @@
 #hero-circle-left,
 #hero-circle-right {
     display: inline-block;
+    margin: 26px 0 0 0;
     width: 100px;
     height: 100px;
-    margin: 26px 0 0 0;
     border-radius: 100px;
-    line-height: 114px;
+    line-height: 100px;
     font-size: 72px;
     text-align: center;
     color: rgba(255,255,255,0.9);
     text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    -webkit-transform-origin: 50% 100%;
 }
 #hero-circle-center {
     display: inline-block;

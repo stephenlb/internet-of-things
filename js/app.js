@@ -16,35 +16,35 @@ setInterval( function() {
     var title_text  = next(iot_device_list).innerHTML
     ,   circle_text = next(iot_device_list).innerHTML;
 
-    switch_text( circle_right_title, fade_out_and_back, circle_text );
-    switch_text( circle_right,       fade_out_and_back, title_text  );
-}, 3000 );
+    switch_text( circle_right_title, fade_outflip, circle_text, 1.5 );
+    switch_text( circle_right,       fade_outflip, title_text,  1.0  );
+}, 2000 );
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Circle Rotate Functions
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-function switch_text( node, animation, text ) {
-    animation( node, 1.5 );
-    update_text( node, text, 0.75 );
+function switch_text( node, animation, text, duration ) {
+    animation( node, duration );
+    update_text( node, text, duration * 0.5 );
 }
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Animations
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-function fade_out_and_back( node, duration ) {
+function fade_outflip( node, duration ) {
     animate( node, [
-        { 'd' : duration * 0.10, 'opacity' : 1.0 },
-        { 'd' : duration * 0.30, 'opacity' : 0.0 },
-        { 'd' : duration * 0.30, 'opacity' : 0.0 },
-        { 'd' : duration * 0.10, 'opacity' : 1.0 }
+        { d:duration * 0.10, opacity:1.0, ty:  0, s:1.0, rx:0  },
+        { d:duration * 0.30, opacity:0.0, ty:-20, tx: -40, s:0.7, rx:30 },
+        { d:duration * 0.20, opacity:0.0, ty:-90, s:1.0, rx:90 },
+        { d:duration * 0.20, opacity:1.0, ty:  0, s:1.0, rx:0  }
     ] );
 }
 function fade_out_and_back( node, duration ) {
     animate( node, [
-        { 'd' : duration * 0.10, 'opacity' : 1.0 },
-        { 'd' : duration * 0.30, 'opacity' : 0.0 },
-        { 'd' : duration * 0.30, 'opacity' : 0.0 },
-        { 'd' : duration * 0.10, 'opacity' : 1.0 }
+        { d : duration * 0.10, opacity : 1.0 },
+        { d : duration * 0.30, opacity : 0.0 },
+        { d : duration * 0.30, opacity : 0.0 },
+        { d : duration * 0.10, opacity : 1.0 }
     ] );
 }
 
